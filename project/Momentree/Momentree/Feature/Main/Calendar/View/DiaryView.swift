@@ -16,13 +16,13 @@ struct DiaryView: View {
             VStack(alignment: .center, spacing: 0) {
                 HStack {
                     Button("취소") {
-                        
+                        store.send(.buttonTapped(.cancel))
                     }
                     .frame(width: 50)
                     Spacer()
                     
                     Button("저장") {
-                        
+                        store.send(.buttonTapped(.create))
                     }
                 }
                 .frame(height: 32)
