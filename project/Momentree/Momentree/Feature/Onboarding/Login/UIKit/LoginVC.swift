@@ -12,6 +12,7 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
 
     @IBOutlet weak var PWField: UITextField!
     @IBOutlet weak var IDField: UITextField!
+    @IBOutlet weak var loginBtn: UIButton!
     
     private var userToken:String = ""
     
@@ -47,11 +48,85 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
         PWField.isSecureTextEntry = true
     }
     
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if (IDField.text?.count ?? 0 < 1) || (PWField.text?.count ?? 0 < 1) {
+            updateLoginButtonState(isEnabled: false, backgroundColor: UIColor(red: 0.8627, green: 0.8627, blue: 0.8627, alpha: 1.0), borderColor: .clear)
+            } else {
+                updateLoginButtonState(isEnabled: true, backgroundColor: UIColor(hue: 0, saturation: 0.58, brightness: 0.9, alpha: 1.0), borderColor: .clear)
+            }
+    }
+    
+    func updateLoginButtonState(isEnabled: Bool, backgroundColor: UIColor, borderColor: UIColor) {
+        loginBtn.isEnabled = isEnabled
+        loginBtn.backgroundColor = backgroundColor
+        loginBtn.layer.borderColor = borderColor.cgColor
+    }
+    
     @IBAction func IDTextField(_ sender: UITextField) {
         
     }
     
     @IBAction func PWTextField(_ sender: UITextField) {
+    }
+    
+    public func apitest() {
+        // Define the URL
+        guard let url = URL(string: "http://ec2-184-73-145-160.compute-1.amazonaws.com:8080/follow-list") else {
+            print("Invalid URL")
+            return
+        }
+
+        // Create the request
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        // ** Add token if required **
+        let token = userToken // Replace with your actual token
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+
+        
+//        // Define the request body
+//        let requestBody: [String: String] = [
+//            "loginId": IDField.text!,  // Replace with actual loginId
+//            "password": PWField.text! // Replace with actual password
+//            
+//        ]
+//        // Convert the body to JSON data
+//        do {
+//            request.httpBody = try JSONSerialization.data(withJSONObject: requestBody, options: [])
+//        } catch {
+//            print("Failed to encode JSON")
+//            return
+//        }
+
+        // Make the network request
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Request failed with error: \(error.localizedDescription)")
+                return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                print("Response status code: \(response.statusCode)")
+            }
+            
+            if let data = data, let responseString = String(data: data, encoding: .utf8) {
+                print("Response data: \(responseString)")
+                
+                let parser = JSONParser()
+                if let response = parser.parseLoginResponse(from: responseString) {
+                    self.userToken = response.accessToken
+                    print("Access Token: \(response.accessToken)")
+                    print("User ID: \(response.userId)")
+                } else {
+                    print("Failed to parse login response.")
+                }
+            }
+        }
+
+        // Start the task
+        task.resume()
     }
     
     @IBAction func tappedLoginBtn(_ sender: UIButton) {

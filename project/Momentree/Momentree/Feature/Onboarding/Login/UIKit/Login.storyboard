@@ -129,6 +129,7 @@
                     <connections>
                         <outlet property="IDField" destination="HAw-lM-Rdr" id="h6k-3A-ohF"/>
                         <outlet property="PWField" destination="SfX-rh-HUq" id="gif-oQ-eEi"/>
+                        <outlet property="loginBtn" destination="V6p-wi-N1f" id="ePt-8P-8SP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -201,16 +202,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="C2J-cE-amU">
                                 <rect key="frame" x="108" y="723.33333333333337" width="180" height="50.333333333333371"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upH-Mi-QzH">
-                                        <rect key="frame" x="33.33333333333335" y="0.0" width="113.66666666666669" height="14.333333333333334"/>
-                                        <string key="text">멘트리가 처음이신가요?
-여기를 눌러 회원가입을 진행해주세요.</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입한 계정이 있으신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upH-Mi-QzH">
+                                        <rect key="frame" x="26.333333333333336" y="0.0" width="127.33333333333331" height="14.333333333333334"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <color key="textColor" red="0.71764707569999997" green="0.66274511810000003" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rz3-xC-TtH">
-                                        <rect key="frame" x="0.3333333333333286" y="23.333333333333258" width="179.33333333333337" height="27"/>
+                                        <rect key="frame" x="5.3333333333333286" y="23.333333333333258" width="169.33333333333337" height="27"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="여기를 눌러" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chY-4c-O8Z">
                                                 <rect key="frame" x="0.0" y="0.0" width="55.333333333333336" height="27"/>
@@ -219,18 +218,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxL-QY-SkX">
-                                                <rect key="frame" x="56.333333333333329" y="0.0" width="42" height="27"/>
+                                                <rect key="frame" x="56.333333333333329" y="0.0" width="32" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="회원가입">
+                                                <state key="normal" title="로그인">
                                                     <color key="titleColor" red="0.33333334329999997" green="0.44705885649999999" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="backBtn:" destination="ugi-o0-NPc" eventType="touchUpInside" id="Ytz-2L-T09"/>
                                                     <action selector="tappedRegisterBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="b93-S9-49m"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="을 진행해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXA-5C-xFK">
-                                                <rect key="frame" x="99.333333333333314" y="0.0" width="80" height="27"/>
+                                                <rect key="frame" x="89.333333333333314" y="0.0" width="80" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="pIg-GB-d5X"/>
                                                 </constraints>
