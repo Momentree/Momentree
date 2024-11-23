@@ -73,6 +73,21 @@ extension DiaryFeature {
             return .none
         }
     }
+    
+    func anyActionReducer() -> some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+                
+            case let .anyAction(.receiveDay(day)):
+                state.day = day
+                
+            default:
+                break
+            }
+            
+            return .none
+        }
+    }
 }
 
 // 뷰에 들어왔을 때 데이터를 찔려서 보여주기

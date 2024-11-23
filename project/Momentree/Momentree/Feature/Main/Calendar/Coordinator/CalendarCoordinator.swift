@@ -45,6 +45,10 @@ struct CalendarCoordinator {
                 
                 state.routes.push(.diary(.init()))
                 
+            
+            case let .router(.routeAction(id: .calendar, action: .calendar(.viewTransition(.sendDayToDiary(day))))):
+                return .send(.router(.routeAction(id: .diary, action: .diary(.anyAction(.receiveDay(day))))))
+            
             default :
                 break
             }
