@@ -35,7 +35,7 @@ struct DiaryFeature {
     }
     
     enum ViewTransition {
-
+        case goBack
     }
     
     enum AnyAction {

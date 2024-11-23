@@ -27,7 +27,7 @@ extension DiaryFeature {
             case let .networkResponse(response):
                 switch response {
                 case let .create(result):
-                    break
+                    return .send(.viewTransition(.goBack))
                 }
                 
             default:

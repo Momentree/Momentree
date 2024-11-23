@@ -40,15 +40,16 @@ struct CalendarCoordinator {
     var body : some ReducerOf<Self> {
         Reduce<State, Action> { state, action in
             switch action {
-                
             case .router(.routeAction(id: .calendar, action: .calendar(.buttonTapped(.goToDiary)))):
                 
                 state.routes.push(.diary(.init()))
                 
-            
             case let .router(.routeAction(id: .calendar, action: .calendar(.viewTransition(.sendDayToDiary(day))))):
                 return .send(.router(.routeAction(id: .diary, action: .diary(.anyAction(.receiveDay(day))))))
             
+            case .router(.routeAction(id: .diary, action: .diary(.viewTransition(.goBack)))):
+                state.routes.goBack()
+                
             default :
                 break
             }
