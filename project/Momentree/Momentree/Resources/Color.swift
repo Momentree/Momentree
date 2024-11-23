@@ -14,13 +14,14 @@ enum ColorSystem: UInt {
     case backgroundLogin = 0xFBF4EE
     case backgroundMain = 0xA7B5E1
     case treeText = 0x766969
+    case disable = 0xDCDCDC
+    case text500 = 0xBAAAAA
+    case underline = 0x4C73FF
     
     var uIntToString: String {
         return String(format: "%06X", self.rawValue)
     }
 }
-
-
 
 //MARK: - SwiftUI
 extension Color {

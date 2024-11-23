@@ -5,7 +5,7 @@
 //  Created by Namuplanet on 11/23/24.
 //
 
-import Foundation
+import SwiftUI
 import ComposableArchitecture
 
 @Reducer
@@ -14,9 +14,15 @@ struct SignFeature {
     @ObservableState
     struct State : Equatable {
         let id = UUID()
+        var userId: String = ""
+        var password: String = ""
+        var confirmPassword: String = ""
+        var duplicateActive: Bool = false
+        var signActive: Bool = false
     }
     
-    enum Action {
+    enum Action: BindableAction {
+        case binding(BindingAction<State>)
         case viewTransition(ViewTransition)
         case buttonTapped(ButtonTapped)
         case networkResponse(NetworkReponse)

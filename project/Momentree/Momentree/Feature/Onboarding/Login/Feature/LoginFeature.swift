@@ -16,6 +16,7 @@ struct LoginFeature {
         let id = UUID()
         var userId: String = ""
         var password: String = ""
+        var loginButtonActive: Bool = false
     }
     
     enum Action: BindableAction {
@@ -23,7 +24,6 @@ struct LoginFeature {
         case viewTransition(ViewTransition)
         case buttonTapped(ButtonTapped)
         case networkResponse(NetworkReponse)
-        case inputUserId(String)
     }
     
     enum ViewTransition {
