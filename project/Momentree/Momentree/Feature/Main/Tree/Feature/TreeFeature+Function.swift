@@ -43,6 +43,31 @@ extension TreeFeature {
             case .buttonTapped(.objectCancel):
                 state.editMode = false
                 
+            case let .buttonTapped(.objectSave(object)):
+                state.objectServer = object
+                state.editMode = false                
+                
+            default:
+                break
+            }
+            
+            return .none
+        }
+    }
+    
+    func anyActionReducer() -> some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+                
+            case let .anyAction(.objectPosition(position)):
+                state.object[position] = .init()
+                           
+            case let .anyAction(.receiveImage((position, objectId))):
+                state.object[position] = objectId
+                
+            case let .anyAction(.removeImage((position, _))):
+                state.object[position] = .init()
+                
             default:
                 break
             }

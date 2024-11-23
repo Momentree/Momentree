@@ -33,7 +33,7 @@ struct CalendarFeature {
     }
     
     enum ViewTransition {
-
+        case sendDayToDiary(Int)
     }
     
     enum AnyAction {

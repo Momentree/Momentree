@@ -35,15 +35,18 @@ struct DiaryFeature {
     }
     
     enum ViewTransition {
-
+        case goBack
     }
     
     enum AnyAction {
+        case receiveDay(Int)
     }
     
     @Dependency(\.networkRepository) var networkRepository
     
     var body : some ReducerOf<Self> {
         BindingReducer()
+        
+        anyActionReducer()
     }
 }

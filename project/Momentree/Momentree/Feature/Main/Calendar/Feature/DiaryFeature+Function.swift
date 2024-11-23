@@ -27,7 +27,7 @@ extension DiaryFeature {
             case let .networkResponse(response):
                 switch response {
                 case let .create(result):
-                    break
+                    return .send(.viewTransition(.goBack))
                 }
                 
             default:
@@ -66,6 +66,21 @@ extension DiaryFeature {
                 case .cancel:
                     return .none
                 }
+            default:
+                break
+            }
+            
+            return .none
+        }
+    }
+    
+    func anyActionReducer() -> some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+                
+            case let .anyAction(.receiveDay(day)):
+                state.day = day
+                
             default:
                 break
             }
