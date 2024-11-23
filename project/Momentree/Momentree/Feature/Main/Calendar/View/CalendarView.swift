@@ -12,6 +12,10 @@ struct CalendarView: View {
     @State var store : StoreOf<CalendarFeature>
     
     var body: some View {
+        // uikit 이용시 코드
+//        StoryboardRepresentable()
+//            .ignoresSafeArea(edges: .top)
+        
         WithPerceptionTracking {
             VStack {
                 Text("달력")
@@ -21,7 +25,6 @@ struct CalendarView: View {
                 }
             }
             .onAppear {
-                
             }
         }
     }

@@ -20,6 +20,7 @@ struct MainCoordinatorView : View {
                             Text("달력")
                         }
                         .tag(MainCoordinator.Tab.calendar)
+                        .ignoresSafeArea()
                     
                     TreeCoordinatorView(store: store.scope(state: \.tree, action: \.tree))
                         .tabItem {
