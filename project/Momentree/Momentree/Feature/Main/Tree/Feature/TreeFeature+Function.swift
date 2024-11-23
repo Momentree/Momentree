@@ -13,6 +13,9 @@ extension TreeFeature {
         Reduce { state, action in
             switch action {
                 
+            case .viewTransition(.editMode):
+                state.editMode = true
+                
             default:
                 break
             }
@@ -37,6 +40,9 @@ extension TreeFeature {
         Reduce { state, action in
             switch action {
 
+            case .buttonTapped(.objectCancel):
+                state.editMode = false
+                
             default:
                 break
             }

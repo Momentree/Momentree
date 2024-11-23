@@ -14,6 +14,8 @@ struct TreeFeature {
     @ObservableState
     struct State : Equatable {
         let id = UUID()
+        var userId : String = "ID"
+        var editMode : Bool = false
     }
     
     enum Action : BindableAction {
@@ -29,11 +31,12 @@ struct TreeFeature {
     }
     
     enum ButtonTapped {
-
+        case objectSave
+        case objectCancel
     }
     
     enum ViewTransition {
-
+        case editMode
     }
     
     enum AnyAction {
