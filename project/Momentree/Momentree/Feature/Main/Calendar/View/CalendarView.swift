@@ -41,7 +41,6 @@ struct CalendarView: View {
                     CalendarCellView(
                         cell: cell,
                         buttonHandler: { id in
-                            // TODO: 연결
                             print("Calendaer")
                             store.send(.viewTransition(.sendDayToDiary(id)))
                         })
@@ -50,7 +49,11 @@ struct CalendarView: View {
         }
         .padding()
         .onAppear {
-            generate2024December()
+            for day in 1...35 {
+                let hasContent = store.objects.contains { $0.day == day }
+                cells.append(CalendarCell(id: day, hasContent: hasContent))
+            }
+            store.send(.viewTransition(.onAppear))
         }
     }
     
@@ -74,19 +77,17 @@ struct CalendarView: View {
                                 .red :
                                 (cell.id % 7 == 0 ? .blue : Color(hex: ColorSystem.treeText.rawValue))
                         )
-                    
+                    Spacer()
+                    if cell.hasContent {
+                        Image("object\(cell.id)")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                    }
                     Spacer()
                 }
                 .frame(height: 90)
             }
             .disabled((0...31 ~= cell.id) == false)
-        }
-    }
-    
-    private func generate2024December() {
-        // 35개의 셀 생성 (31일 + 빈 셀)
-        for day in 1...35 {
-            cells.append(CalendarCell(id: day, hasContent: false))
         }
     }
     

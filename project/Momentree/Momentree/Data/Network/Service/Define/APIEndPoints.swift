@@ -19,16 +19,18 @@ struct APIEndPoints {
      */
     // TODO: - path 입력
     enum APIPath: String {
-        case signUp = "/api/signUp/path"
-        case signIn = "/api/signIn/path"
-        case checkToken = "/api/test/whoami"
+        case signUp = "api/signUp/path"
+        case signIn = "api/signIn/path"
+        case checkToken = "api/test/whoami"
         
-        case saveContent = "/api/saveContent"
-        case getObjectList = "/api/getObjectList"
+        case saveContent = "api/saveContent"
+        case getObjectList = "api/getObjectList"
         case getDetailObject = "api/getObject"
         
-        case createObject = "/api/diary/create/"
-        case updateObject = "/api/diary/update"
+        case createObject = "api/diary/create"
+        case updateObject = "api/diary/update"
+        
+        case unassigned = "/api/diary/unassigned"
     }
 
     static func signUpEndPoint(
@@ -72,6 +74,14 @@ struct APIEndPoints {
         EndPoint(
             path: APIPath.updateObject,
             method: .post
+        )
+    }
+    
+    static func getObjectList(
+    ) -> EndPoint<ObjectContentListResponse> {
+        EndPoint(
+            path: APIPath.getObjectList,
+            method: .get
         )
     }
 }

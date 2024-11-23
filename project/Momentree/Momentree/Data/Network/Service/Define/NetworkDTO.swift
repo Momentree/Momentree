@@ -70,12 +70,10 @@ struct SaveContentResponse: Decodable {
 
 // TODO: 일기 불러오기 (배열)
 struct ObjectContentListRequest: Encodable {
-    let userId: String
-    let date: Int
 }
 
 struct ObjectContentListResponse: Decodable {
-
+    let list: [Object]
 }
 
 // TODO: 일기 디테일 불러오기 (단일)
