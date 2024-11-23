@@ -1,22 +1,21 @@
-// swift-tools-version: 5.9
-import PackageDescription
+// swift-tools-version: 6.0
+@preconcurrency import PackageDescription
 
 #if TUIST
-    import ProjectDescription
+@preconcurrency import ProjectDescription
 
-    let packageSettings = PackageSettings(
-        // Customize the product types for specific package product
-        // Default is .staticFramework
-        // productTypes: ["Alamofire": .framework,] 
-        productTypes: [:]
-    )
+let packageSettings = PackageSettings(
+  productTypes: [
+    "ComposableArchitecture": .framework,
+    "TCACoordinators": .framework
+  ]
+)
 #endif
 
 let package = Package(
-    name: "Momentree",
-    dependencies: [
-        // Add your own dependencies here:
-        // .package(url: "https://github.com/Alamofire/Alamofire", from: "5.0.0"),
-        // You can read more about dependencies here: https://docs.tuist.io/documentation/tuist/dependencies
-    ]
+  name: "Momentree",
+  dependencies: [
+    .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", branch: "1.10.1"),
+    .package(url: "https://github.com/johnpatrickmorgan/TCACoordinators.git", from: "0.6.0")
+  ]
 )
