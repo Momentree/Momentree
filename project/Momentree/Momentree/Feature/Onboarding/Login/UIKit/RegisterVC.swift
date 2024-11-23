@@ -43,6 +43,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         PWField.clearsOnBeginEditing = false                 // 편집 시 기존 텍스트필드값 제거?
         PWField.returnKeyType = .done
         PWField.delegate = self
+        PWField.isSecureTextEntry = true
     }
     
     @IBAction func tappedRegisterBtn(_ sender: UIButton) {

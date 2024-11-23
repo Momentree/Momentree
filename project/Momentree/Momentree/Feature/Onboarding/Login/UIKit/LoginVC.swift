@@ -12,6 +12,9 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
 
     @IBOutlet weak var PWField: UITextField!
     @IBOutlet weak var IDField: UITextField!
+    
+    private var userToken:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setDesign()
@@ -24,7 +27,7 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
         IDField.spellCheckingType = .no                      // 맞춤법 검사 활성화 여부
         IDField.autocapitalizationType = .none               // 자동 대문자 활성화 여부
 
-        IDField.placeholder = "이메일 입력"                     // 플레이스 홀더
+        IDField.placeholder = "아이디 입력"                     // 플레이스 홀더
         IDField.clearButtonMode = .always                    // 입력내용 한번에 지우는 x버튼(오른쪽)
         IDField.clearsOnBeginEditing = false                 // 편집 시 기존 텍스트필드값 제거?
         IDField.returnKeyType = .done
@@ -36,11 +39,12 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
         PWField.spellCheckingType = .no                      // 맞춤법 검사 활성화 여부
         PWField.autocapitalizationType = .none               // 자동 대문자 활성화 여부
 
-        PWField.placeholder = "이메일 입력"                     // 플레이스 홀더
+        PWField.placeholder = "비밀번호 입력"                     // 플레이스 홀더
         PWField.clearButtonMode = .always                    // 입력내용 한번에 지우는 x버튼(오른쪽)
         PWField.clearsOnBeginEditing = false                 // 편집 시 기존 텍스트필드값 제거?
         PWField.returnKeyType = .done
         PWField.delegate = self
+        PWField.isSecureTextEntry = true
     }
     
     @IBAction func IDTextField(_ sender: UITextField) {
@@ -57,13 +61,13 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
             return
         }
 
-        // Create the request 
+        // Create the request
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         // ** Add token if required **
-        let token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiaWF0IjoxNzMyMzk0ODkzLCJleHAiOjE3MzIzOTg0OTN9.pZWFIHTKLIjFPsFsNFZhYQDPhq7aIOFDJOmgohcUgWo" // Replace with your actual token
+        let token = userToken // Replace with your actual token
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 
         
@@ -73,12 +77,9 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
             "password": PWField.text! // Replace with actual password
             
         ]
-        dump(requestBody)
         // Convert the body to JSON data
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: requestBody, options: [])
-            dump(request.httpBody)
-            dump(request)
         } catch {
             print("Failed to encode JSON")
             return
@@ -97,43 +98,21 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
             
             if let data = data, let responseString = String(data: data, encoding: .utf8) {
                 print("Response data: \(responseString)")
+                
+                let parser = JSONParser()
+                if let response = parser.parseLoginResponse(from: responseString) {
+                    self.userToken = response.accessToken
+                    print("Access Token: \(response.accessToken)")
+                    print("User ID: \(response.userId)")
+                } else {
+                    print("Failed to parse login response.")
+                }
             }
         }
 
         // Start the task
         task.resume()
     }
-    
-//    func login() {
-//        let url = "http://ec2-184-73-145-160.compute-1.amazonaws.com:8080/sign-in"
-//
-//        let parameters: [String: String] = [
-//                    "loginId": "admin",
-//                    "password": "admin"
-//                ]
-//        
-//        // Make the POST request using Alamofire
-//                AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default)
-//                    .validate() // 자동으로 HTTP 상태 코드를 확인
-//                    .responseJSON { [weak self] response in
-//                        switch response.result {
-//                        case .success(let value):
-//                            // JSON 데이터 처리
-//                            if let json = value as? [String: Any],
-//                               let token = json["token"] as? String { // 서버가 "token" 키로 반환한다고 가정
-//                                self?.token = token
-//                                print("Login successful. Token: \(token)")
-//                                completion(.success(token))
-//                            } else {
-//                                print("Token not found in response.")
-//                                completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Token not found"])))
-//                            }
-//                        case .failure(let error):
-//                            print("Login request failed with error: \(error.localizedDescription)")
-//                            completion(.failure(error))
-//                        }
-//                    }
-//    }
     
     @IBAction func tappedRegisterBtn(_ sender: UIButton) {
         guard let secondVC = storyboard?.instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC else { return }
@@ -142,15 +121,29 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
         self.present(secondVC, animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    struct LoginResponse: Codable {
+        let accessToken: String
+        let userId: Int
     }
-    */
 
+    class JSONParser {
+        func parseLoginResponse(from jsonString: String) -> LoginResponse? {
+            // Convert the string to Data
+            guard let jsonData = jsonString.data(using: .utf8) else {
+                print("Failed to convert string to Data.")
+                return nil
+            }
+
+            // Decode the JSON
+            let decoder = JSONDecoder()
+            do {
+                let response = try decoder.decode(LoginResponse.self, from: jsonData)
+                return response
+            } catch {
+                print("Failed to decode JSON: \(error.localizedDescription)")
+                return nil
+            }
+        }
+    }
 }
 
