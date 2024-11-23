@@ -1,0 +1,771 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B6CC67B2CF20E4500806D8C /* MomentreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC67A2CF20E4500806D8C /* MomentreeApp.swift */; };
+		6B6CC67D2CF20E4500806D8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC67C2CF20E4500806D8C /* ContentView.swift */; };
+		6B6CC67F2CF20E4600806D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B6CC67E2CF20E4600806D8C /* Assets.xcassets */; };
+		6B6CC6822CF20E4600806D8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B6CC6812CF20E4600806D8C /* Preview Assets.xcassets */; };
+		6B6CC6C82CF20E5900806D8C /* AroundCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6882CF20E5900806D8C /* AroundCoordinator.swift */; };
+		6B6CC6C92CF20E5900806D8C /* AroundScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6892CF20E5900806D8C /* AroundScreen.swift */; };
+		6B6CC6CA2CF20E5900806D8C /* AroundScreen+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC68A2CF20E5900806D8C /* AroundScreen+Identifiable.swift */; };
+		6B6CC6CB2CF20E5900806D8C /* AroundFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC68C2CF20E5900806D8C /* AroundFeature.swift */; };
+		6B6CC6CC2CF20E5900806D8C /* AroundFeature+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC68D2CF20E5900806D8C /* AroundFeature+Function.swift */; };
+		6B6CC6CD2CF20E5900806D8C /* AroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC68F2CF20E5900806D8C /* AroundView.swift */; };
+		6B6CC6CE2CF20E5900806D8C /* CalendarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6922CF20E5900806D8C /* CalendarCoordinator.swift */; };
+		6B6CC6CF2CF20E5900806D8C /* CalendarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6932CF20E5900806D8C /* CalendarScreen.swift */; };
+		6B6CC6D02CF20E5900806D8C /* CalendarScreen+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6942CF20E5900806D8C /* CalendarScreen+Identifiable.swift */; };
+		6B6CC6D12CF20E5900806D8C /* CalendarFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6962CF20E5900806D8C /* CalendarFeature.swift */; };
+		6B6CC6D22CF20E5900806D8C /* CalendarFeature+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6972CF20E5900806D8C /* CalendarFeature+Function.swift */; };
+		6B6CC6D32CF20E5900806D8C /* DiaryFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6982CF20E5900806D8C /* DiaryFeature.swift */; };
+		6B6CC6D42CF20E5900806D8C /* DiaryFeature+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6992CF20E5900806D8C /* DiaryFeature+Function.swift */; };
+		6B6CC6D52CF20E5900806D8C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC69B2CF20E5900806D8C /* CalendarView.swift */; };
+		6B6CC6D62CF20E5900806D8C /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC69C2CF20E5900806D8C /* DiaryView.swift */; };
+		6B6CC6D72CF20E5900806D8C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC69F2CF20E5900806D8C /* MainCoordinator.swift */; };
+		6B6CC6D82CF20E5900806D8C /* MainCoordinator+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6A02CF20E5900806D8C /* MainCoordinator+Function.swift */; };
+		6B6CC6D92CF20E5900806D8C /* MainCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6A22CF20E5900806D8C /* MainCoordinatorView.swift */; };
+		6B6CC6DA2CF20E5900806D8C /* TreeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6A52CF20E5900806D8C /* TreeCoordinator.swift */; };
+		6B6CC6DB2CF20E5900806D8C /* TreeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6A62CF20E5900806D8C /* TreeScreen.swift */; };
+		6B6CC6DC2CF20E5900806D8C /* TreeScreen+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6A72CF20E5900806D8C /* TreeScreen+Identifiable.swift */; };
+		6B6CC6DD2CF20E5900806D8C /* TreeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6A92CF20E5900806D8C /* TreeFeature.swift */; };
+		6B6CC6DE2CF20E5900806D8C /* TreeFeature+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6AA2CF20E5900806D8C /* TreeFeature+Function.swift */; };
+		6B6CC6DF2CF20E5900806D8C /* TreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6AC2CF20E5900806D8C /* TreeView.swift */; };
+		6B6CC6E02CF20E5900806D8C /* OnbaordingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6B02CF20E5900806D8C /* OnbaordingScreen.swift */; };
+		6B6CC6E12CF20E5900806D8C /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6B12CF20E5900806D8C /* OnboardingCoordinator.swift */; };
+		6B6CC6E22CF20E5900806D8C /* OnboardingScreen+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6B22CF20E5900806D8C /* OnboardingScreen+Identifiable.swift */; };
+		6B6CC6E32CF20E5900806D8C /* LoginFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6B42CF20E5900806D8C /* LoginFeature.swift */; };
+		6B6CC6E42CF20E5900806D8C /* LoginFeature+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6B52CF20E5900806D8C /* LoginFeature+Function.swift */; };
+		6B6CC6E52CF20E5900806D8C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6B72CF20E5900806D8C /* LoginView.swift */; };
+		6B6CC6E62CF20E5900806D8C /* SignFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6BA2CF20E5900806D8C /* SignFeature.swift */; };
+		6B6CC6E72CF20E5900806D8C /* SignFeature+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6BB2CF20E5900806D8C /* SignFeature+Function.swift */; };
+		6B6CC6E82CF20E5900806D8C /* SignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6BD2CF20E5900806D8C /* SignView.swift */; };
+		6B6CC6E92CF20E5900806D8C /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6C12CF20E5900806D8C /* RootCoordinator.swift */; };
+		6B6CC6EA2CF20E5900806D8C /* RootCoordinator+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6C22CF20E5900806D8C /* RootCoordinator+Function.swift */; };
+		6B6CC6EB2CF20E5900806D8C /* RootCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6C42CF20E5900806D8C /* RootCoordinatorView.swift */; };
+		6B6CC6EE2CF20EB600806D8C /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 6B6CC6ED2CF20EB600806D8C /* TCACoordinators */; };
+		6B6CC6F12CF20EBF00806D8C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 6B6CC6F02CF20EBF00806D8C /* ComposableArchitecture */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6B6CC6772CF20E4500806D8C /* Momentree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momentree.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B6CC67A2CF20E4500806D8C /* MomentreeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentreeApp.swift; sourceTree = "<group>"; };
+		6B6CC67C2CF20E4500806D8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6B6CC67E2CF20E4600806D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B6CC6812CF20E4600806D8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6B6CC6882CF20E5900806D8C /* AroundCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundCoordinator.swift; sourceTree = "<group>"; };
+		6B6CC6892CF20E5900806D8C /* AroundScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundScreen.swift; sourceTree = "<group>"; };
+		6B6CC68A2CF20E5900806D8C /* AroundScreen+Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AroundScreen+Identifiable.swift"; sourceTree = "<group>"; };
+		6B6CC68C2CF20E5900806D8C /* AroundFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundFeature.swift; sourceTree = "<group>"; };
+		6B6CC68D2CF20E5900806D8C /* AroundFeature+Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AroundFeature+Function.swift"; sourceTree = "<group>"; };
+		6B6CC68F2CF20E5900806D8C /* AroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundView.swift; sourceTree = "<group>"; };
+		6B6CC6922CF20E5900806D8C /* CalendarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCoordinator.swift; sourceTree = "<group>"; };
+		6B6CC6932CF20E5900806D8C /* CalendarScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarScreen.swift; sourceTree = "<group>"; };
+		6B6CC6942CF20E5900806D8C /* CalendarScreen+Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CalendarScreen+Identifiable.swift"; sourceTree = "<group>"; };
+		6B6CC6962CF20E5900806D8C /* CalendarFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarFeature.swift; sourceTree = "<group>"; };
+		6B6CC6972CF20E5900806D8C /* CalendarFeature+Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CalendarFeature+Function.swift"; sourceTree = "<group>"; };
+		6B6CC6982CF20E5900806D8C /* DiaryFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryFeature.swift; sourceTree = "<group>"; };
+		6B6CC6992CF20E5900806D8C /* DiaryFeature+Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DiaryFeature+Function.swift"; sourceTree = "<group>"; };
+		6B6CC69B2CF20E5900806D8C /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		6B6CC69C2CF20E5900806D8C /* DiaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		6B6CC69F2CF20E5900806D8C /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		6B6CC6A02CF20E5900806D8C /* MainCoordinator+Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainCoordinator+Function.swift"; sourceTree = "<group>"; };
+		6B6CC6A22CF20E5900806D8C /* MainCoordinatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinatorView.swift; sourceTree = "<group>"; };
+		6B6CC6A52CF20E5900806D8C /* TreeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeCoordinator.swift; sourceTree = "<group>"; };
+		6B6CC6A62CF20E5900806D8C /* TreeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeScreen.swift; sourceTree = "<group>"; };
+		6B6CC6A72CF20E5900806D8C /* TreeScreen+Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TreeScreen+Identifiable.swift"; sourceTree = "<group>"; };
+		6B6CC6A92CF20E5900806D8C /* TreeFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeFeature.swift; sourceTree = "<group>"; };
+		6B6CC6AA2CF20E5900806D8C /* TreeFeature+Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TreeFeature+Function.swift"; sourceTree = "<group>"; };
+		6B6CC6AC2CF20E5900806D8C /* TreeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeView.swift; sourceTree = "<group>"; };
+		6B6CC6B02CF20E5900806D8C /* OnbaordingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnbaordingScreen.swift; sourceTree = "<group>"; };
+		6B6CC6B12CF20E5900806D8C /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		6B6CC6B22CF20E5900806D8C /* OnboardingScreen+Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OnboardingScreen+Identifiable.swift"; sourceTree = "<group>"; };
+		6B6CC6B42CF20E5900806D8C /* LoginFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFeature.swift; sourceTree = "<group>"; };
+		6B6CC6B52CF20E5900806D8C /* LoginFeature+Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginFeature+Function.swift"; sourceTree = "<group>"; };
+		6B6CC6B72CF20E5900806D8C /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6B6CC6BA2CF20E5900806D8C /* SignFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignFeature.swift; sourceTree = "<group>"; };
+		6B6CC6BB2CF20E5900806D8C /* SignFeature+Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignFeature+Function.swift"; sourceTree = "<group>"; };
+		6B6CC6BD2CF20E5900806D8C /* SignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignView.swift; sourceTree = "<group>"; };
+		6B6CC6C12CF20E5900806D8C /* RootCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		6B6CC6C22CF20E5900806D8C /* RootCoordinator+Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RootCoordinator+Function.swift"; sourceTree = "<group>"; };
+		6B6CC6C42CF20E5900806D8C /* RootCoordinatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinatorView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B6CC6742CF20E4500806D8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B6CC6F12CF20EBF00806D8C /* ComposableArchitecture in Frameworks */,
+				6B6CC6EE2CF20EB600806D8C /* TCACoordinators in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B6CC66E2CF20E4500806D8C = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6792CF20E4500806D8C /* Momentree */,
+				6B6CC6782CF20E4500806D8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B6CC6782CF20E4500806D8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6772CF20E4500806D8C /* Momentree.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B6CC6792CF20E4500806D8C /* Momentree */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6C72CF20E5900806D8C /* Feature */,
+				6B6CC67A2CF20E4500806D8C /* MomentreeApp.swift */,
+				6B6CC67C2CF20E4500806D8C /* ContentView.swift */,
+				6B6CC67E2CF20E4600806D8C /* Assets.xcassets */,
+				6B6CC6802CF20E4600806D8C /* Preview Content */,
+			);
+			path = Momentree;
+			sourceTree = "<group>";
+		};
+		6B6CC6802CF20E4600806D8C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6812CF20E4600806D8C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6B6CC68B2CF20E5900806D8C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6882CF20E5900806D8C /* AroundCoordinator.swift */,
+				6B6CC6892CF20E5900806D8C /* AroundScreen.swift */,
+				6B6CC68A2CF20E5900806D8C /* AroundScreen+Identifiable.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		6B6CC68E2CF20E5900806D8C /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC68C2CF20E5900806D8C /* AroundFeature.swift */,
+				6B6CC68D2CF20E5900806D8C /* AroundFeature+Function.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		6B6CC6902CF20E5900806D8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC68F2CF20E5900806D8C /* AroundView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B6CC6912CF20E5900806D8C /* Around */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC68B2CF20E5900806D8C /* Coordinator */,
+				6B6CC68E2CF20E5900806D8C /* Feature */,
+				6B6CC6902CF20E5900806D8C /* View */,
+			);
+			path = Around;
+			sourceTree = "<group>";
+		};
+		6B6CC6952CF20E5900806D8C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6922CF20E5900806D8C /* CalendarCoordinator.swift */,
+				6B6CC6932CF20E5900806D8C /* CalendarScreen.swift */,
+				6B6CC6942CF20E5900806D8C /* CalendarScreen+Identifiable.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		6B6CC69A2CF20E5900806D8C /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6962CF20E5900806D8C /* CalendarFeature.swift */,
+				6B6CC6972CF20E5900806D8C /* CalendarFeature+Function.swift */,
+				6B6CC6982CF20E5900806D8C /* DiaryFeature.swift */,
+				6B6CC6992CF20E5900806D8C /* DiaryFeature+Function.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		6B6CC69D2CF20E5900806D8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC69B2CF20E5900806D8C /* CalendarView.swift */,
+				6B6CC69C2CF20E5900806D8C /* DiaryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B6CC69E2CF20E5900806D8C /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6952CF20E5900806D8C /* Coordinator */,
+				6B6CC69A2CF20E5900806D8C /* Feature */,
+				6B6CC69D2CF20E5900806D8C /* View */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		6B6CC6A12CF20E5900806D8C /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC69F2CF20E5900806D8C /* MainCoordinator.swift */,
+				6B6CC6A02CF20E5900806D8C /* MainCoordinator+Function.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		6B6CC6A32CF20E5900806D8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6A22CF20E5900806D8C /* MainCoordinatorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B6CC6A42CF20E5900806D8C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6A12CF20E5900806D8C /* Feature */,
+				6B6CC6A32CF20E5900806D8C /* View */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		6B6CC6A82CF20E5900806D8C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6A52CF20E5900806D8C /* TreeCoordinator.swift */,
+				6B6CC6A62CF20E5900806D8C /* TreeScreen.swift */,
+				6B6CC6A72CF20E5900806D8C /* TreeScreen+Identifiable.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		6B6CC6AB2CF20E5900806D8C /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6A92CF20E5900806D8C /* TreeFeature.swift */,
+				6B6CC6AA2CF20E5900806D8C /* TreeFeature+Function.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		6B6CC6AD2CF20E5900806D8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6AC2CF20E5900806D8C /* TreeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B6CC6AE2CF20E5900806D8C /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6A82CF20E5900806D8C /* Coordinator */,
+				6B6CC6AB2CF20E5900806D8C /* Feature */,
+				6B6CC6AD2CF20E5900806D8C /* View */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
+		6B6CC6AF2CF20E5900806D8C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6912CF20E5900806D8C /* Around */,
+				6B6CC69E2CF20E5900806D8C /* Calendar */,
+				6B6CC6A42CF20E5900806D8C /* Coordinator */,
+				6B6CC6AE2CF20E5900806D8C /* Tree */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6B6CC6B32CF20E5900806D8C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6B02CF20E5900806D8C /* OnbaordingScreen.swift */,
+				6B6CC6B12CF20E5900806D8C /* OnboardingCoordinator.swift */,
+				6B6CC6B22CF20E5900806D8C /* OnboardingScreen+Identifiable.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		6B6CC6B62CF20E5900806D8C /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6B42CF20E5900806D8C /* LoginFeature.swift */,
+				6B6CC6B52CF20E5900806D8C /* LoginFeature+Function.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		6B6CC6B82CF20E5900806D8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6B72CF20E5900806D8C /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B6CC6B92CF20E5900806D8C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6B62CF20E5900806D8C /* Feature */,
+				6B6CC6B82CF20E5900806D8C /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6B6CC6BC2CF20E5900806D8C /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6BA2CF20E5900806D8C /* SignFeature.swift */,
+				6B6CC6BB2CF20E5900806D8C /* SignFeature+Function.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		6B6CC6BE2CF20E5900806D8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6BD2CF20E5900806D8C /* SignView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B6CC6BF2CF20E5900806D8C /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6BC2CF20E5900806D8C /* Feature */,
+				6B6CC6BE2CF20E5900806D8C /* View */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+		6B6CC6C02CF20E5900806D8C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6B32CF20E5900806D8C /* Coordinator */,
+				6B6CC6B92CF20E5900806D8C /* Login */,
+				6B6CC6BF2CF20E5900806D8C /* Sign */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		6B6CC6C32CF20E5900806D8C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6C12CF20E5900806D8C /* RootCoordinator.swift */,
+				6B6CC6C22CF20E5900806D8C /* RootCoordinator+Function.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		6B6CC6C52CF20E5900806D8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6C42CF20E5900806D8C /* RootCoordinatorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B6CC6C62CF20E5900806D8C /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6C32CF20E5900806D8C /* Coordinator */,
+				6B6CC6C52CF20E5900806D8C /* View */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		6B6CC6C72CF20E5900806D8C /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				6B6CC6AF2CF20E5900806D8C /* Main */,
+				6B6CC6C02CF20E5900806D8C /* Onboarding */,
+				6B6CC6C62CF20E5900806D8C /* Root */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B6CC6762CF20E4500806D8C /* Momentree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B6CC6852CF20E4600806D8C /* Build configuration list for PBXNativeTarget "Momentree" */;
+			buildPhases = (
+				6B6CC6732CF20E4500806D8C /* Sources */,
+				6B6CC6742CF20E4500806D8C /* Frameworks */,
+				6B6CC6752CF20E4500806D8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Momentree;
+			packageProductDependencies = (
+				6B6CC6ED2CF20EB600806D8C /* TCACoordinators */,
+				6B6CC6F02CF20EBF00806D8C /* ComposableArchitecture */,
+			);
+			productName = Momentree;
+			productReference = 6B6CC6772CF20E4500806D8C /* Momentree.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B6CC66F2CF20E4500806D8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					6B6CC6762CF20E4500806D8C = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 6B6CC6722CF20E4500806D8C /* Build configuration list for PBXProject "Momentree" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B6CC66E2CF20E4500806D8C;
+			packageReferences = (
+				6B6CC6EC2CF20EB600806D8C /* XCRemoteSwiftPackageReference "TCACoordinators" */,
+				6B6CC6EF2CF20EBF00806D8C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
+			productRefGroup = 6B6CC6782CF20E4500806D8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B6CC6762CF20E4500806D8C /* Momentree */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B6CC6752CF20E4500806D8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B6CC6822CF20E4600806D8C /* Preview Assets.xcassets in Resources */,
+				6B6CC67F2CF20E4600806D8C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B6CC6732CF20E4500806D8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B6CC6DD2CF20E5900806D8C /* TreeFeature.swift in Sources */,
+				6B6CC6D82CF20E5900806D8C /* MainCoordinator+Function.swift in Sources */,
+				6B6CC6EA2CF20E5900806D8C /* RootCoordinator+Function.swift in Sources */,
+				6B6CC6E32CF20E5900806D8C /* LoginFeature.swift in Sources */,
+				6B6CC67D2CF20E4500806D8C /* ContentView.swift in Sources */,
+				6B6CC6DE2CF20E5900806D8C /* TreeFeature+Function.swift in Sources */,
+				6B6CC6C82CF20E5900806D8C /* AroundCoordinator.swift in Sources */,
+				6B6CC6D52CF20E5900806D8C /* CalendarView.swift in Sources */,
+				6B6CC6E72CF20E5900806D8C /* SignFeature+Function.swift in Sources */,
+				6B6CC6EB2CF20E5900806D8C /* RootCoordinatorView.swift in Sources */,
+				6B6CC6E62CF20E5900806D8C /* SignFeature.swift in Sources */,
+				6B6CC6DA2CF20E5900806D8C /* TreeCoordinator.swift in Sources */,
+				6B6CC6CE2CF20E5900806D8C /* CalendarCoordinator.swift in Sources */,
+				6B6CC6C92CF20E5900806D8C /* AroundScreen.swift in Sources */,
+				6B6CC6CB2CF20E5900806D8C /* AroundFeature.swift in Sources */,
+				6B6CC6CC2CF20E5900806D8C /* AroundFeature+Function.swift in Sources */,
+				6B6CC6E42CF20E5900806D8C /* LoginFeature+Function.swift in Sources */,
+				6B6CC6DB2CF20E5900806D8C /* TreeScreen.swift in Sources */,
+				6B6CC6E92CF20E5900806D8C /* RootCoordinator.swift in Sources */,
+				6B6CC6E82CF20E5900806D8C /* SignView.swift in Sources */,
+				6B6CC6DF2CF20E5900806D8C /* TreeView.swift in Sources */,
+				6B6CC6D72CF20E5900806D8C /* MainCoordinator.swift in Sources */,
+				6B6CC6D42CF20E5900806D8C /* DiaryFeature+Function.swift in Sources */,
+				6B6CC6D12CF20E5900806D8C /* CalendarFeature.swift in Sources */,
+				6B6CC6D22CF20E5900806D8C /* CalendarFeature+Function.swift in Sources */,
+				6B6CC6E22CF20E5900806D8C /* OnboardingScreen+Identifiable.swift in Sources */,
+				6B6CC6E12CF20E5900806D8C /* OnboardingCoordinator.swift in Sources */,
+				6B6CC6D32CF20E5900806D8C /* DiaryFeature.swift in Sources */,
+				6B6CC6D62CF20E5900806D8C /* DiaryView.swift in Sources */,
+				6B6CC67B2CF20E4500806D8C /* MomentreeApp.swift in Sources */,
+				6B6CC6D02CF20E5900806D8C /* CalendarScreen+Identifiable.swift in Sources */,
+				6B6CC6D92CF20E5900806D8C /* MainCoordinatorView.swift in Sources */,
+				6B6CC6CF2CF20E5900806D8C /* CalendarScreen.swift in Sources */,
+				6B6CC6E02CF20E5900806D8C /* OnbaordingScreen.swift in Sources */,
+				6B6CC6DC2CF20E5900806D8C /* TreeScreen+Identifiable.swift in Sources */,
+				6B6CC6CA2CF20E5900806D8C /* AroundScreen+Identifiable.swift in Sources */,
+				6B6CC6E52CF20E5900806D8C /* LoginView.swift in Sources */,
+				6B6CC6CD2CF20E5900806D8C /* AroundView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6B6CC6832CF20E4600806D8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6B6CC6842CF20E4600806D8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B6CC6862CF20E4600806D8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Momentree/Preview Content\"";
+				DEVELOPMENT_TEAM = SUZFV58S8B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Momentree.Momentree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6B6CC6872CF20E4600806D8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Momentree/Preview Content\"";
+				DEVELOPMENT_TEAM = SUZFV58S8B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Momentree.Momentree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B6CC6722CF20E4500806D8C /* Build configuration list for PBXProject "Momentree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B6CC6832CF20E4600806D8C /* Debug */,
+				6B6CC6842CF20E4600806D8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B6CC6852CF20E4600806D8C /* Build configuration list for PBXNativeTarget "Momentree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B6CC6862CF20E4600806D8C /* Debug */,
+				6B6CC6872CF20E4600806D8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6B6CC6EC2CF20EB600806D8C /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.1;
+			};
+		};
+		6B6CC6EF2CF20EBF00806D8C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.16.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6B6CC6ED2CF20EB600806D8C /* TCACoordinators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B6CC6EC2CF20EB600806D8C /* XCRemoteSwiftPackageReference "TCACoordinators" */;
+			productName = TCACoordinators;
+		};
+		6B6CC6F02CF20EBF00806D8C /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B6CC6EF2CF20EBF00806D8C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6B6CC66F2CF20E4500806D8C /* Project object */;
+}
