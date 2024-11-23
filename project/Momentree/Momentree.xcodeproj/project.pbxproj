@@ -15,7 +15,7 @@
 		6B6CC6C92CF20E5900806D8C /* AroundScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6892CF20E5900806D8C /* AroundScreen.swift */; };
 		6B6CC6CA2CF20E5900806D8C /* AroundScreen+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC68A2CF20E5900806D8C /* AroundScreen+Identifiable.swift */; };
 		6B6CC6CB2CF20E5900806D8C /* AroundFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC68C2CF20E5900806D8C /* AroundFeature.swift */; };
-		6B6CC6CC2CF20E5900806D8C /* AroundFeature+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC68D2CF20E5900806D8C /* AroundFeature+Function.swift */; };
+		6B6CC6CC2CF20E5900806D8C /* AroundFeature+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC68D2CF20E5900806D8C /* AroundFeature+Function.swift */;    };
 		6B6CC6CD2CF20E5900806D8C /* AroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC68F2CF20E5900806D8C /* AroundView.swift */; };
 		6B6CC6CE2CF20E5900806D8C /* CalendarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6922CF20E5900806D8C /* CalendarCoordinator.swift */; };
 		6B6CC6CF2CF20E5900806D8C /* CalendarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6932CF20E5900806D8C /* CalendarScreen.swift */; };
@@ -547,6 +547,8 @@
 				A5F9D77A2CF227E40003842A /* Object.swift */,
 			);
 			path = Model;
+            sourceTree = "<group>";
+        };
 		6BFE33562CF21E5A0019AA49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
