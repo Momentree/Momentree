@@ -26,7 +26,7 @@ extension DiaryFeature {
             switch action {
             case let .networkResponse(response):
                 switch response {
-                case .create:
+                case let .create(result):
                     break
                 }
                 
@@ -45,19 +45,21 @@ extension DiaryFeature {
                 switch response {
                 case .create:
                     let object = Object(day: state.day, content: state.content)
+                    
                     return .run { send in
                         do {
+                            
                             try await send(
                                 .networkResponse(
                                     .create(
                                         networkRepository.create(object: object)
                                     )
-                                    
                                 )
                             )
                         }
                         catch {
-                            
+                            // Server Error
+                            // -> 팝업
                         }
                     }
                     
@@ -72,3 +74,5 @@ extension DiaryFeature {
         }
     }
 }
+
+// 뷰에 들어왔을 때 데이터를 찔려서 보여주기

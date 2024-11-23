@@ -50,7 +50,14 @@ struct CreateObjectResponse: Decodable {
     let lastModifiedDate: String
 }
 
- 
+struct UpdateObjectRequest: Encodable {
+    let id: Int
+    let content: String
+}
+
+struct UpdateObjectResponse: Decodable {
+    
+}
 
 struct SaveContentRequest: Encodable {
     

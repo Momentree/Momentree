@@ -28,6 +28,7 @@ struct APIEndPoints {
         case getDetailObject = "api/getObject"
         
         case createObject = "/api/diary/create/"
+        case updateObject = "/api/diary/update"
     }
 
     static func signUpEndPoint(
@@ -62,6 +63,15 @@ struct APIEndPoints {
             path: APIPath.createObject,
             method: .post,
             pathParameter: path
+        )
+    }
+    
+    static func updateObject(
+        request: UpdateObjectRequest
+    ) -> EndPoint<UpdateObjectResponse> {
+        EndPoint(
+            path: APIPath.updateObject,
+            method: .post
         )
     }
 }

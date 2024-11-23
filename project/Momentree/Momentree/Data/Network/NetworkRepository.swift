@@ -12,6 +12,10 @@ protocol NetworkRepositoryProtocol {
     func create(
         object: Object
     )  async throws -> Result<CreateObjectResponse, NetworkError>
+    
+    func update(
+        object: Object
+    ) async throws
 }
 
 final class NetworkRepository: NetworkRepositoryProtocol {
@@ -36,6 +40,12 @@ final class NetworkRepository: NetworkRepositoryProtocol {
         catch {
             throw NetworkError.URLError
         }
+    }
+    
+    func update(object: Object) async throws {
+        let reqeust = UpdateObjectRequest(id: object.day, content: object.content)
+        let endPoint = APIEndPoints.updateObject(request: reqeust)
+        let result = try await networkService.asyncRequest(with: endPoint)
     }
 }
 
