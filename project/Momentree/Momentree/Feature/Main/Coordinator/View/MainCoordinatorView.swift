@@ -31,14 +31,6 @@ struct MainCoordinatorView : View {
                                 .tabItemFont()
                         }
                         .tag(MainCoordinator.Tab.tree)
-                    
-                    AroundCoordinatorView(store: store.scope(state: \.around, action: \.around))
-                        .tabItem {
-                            Image(store.selectedTab == .around ? .followOn : .followOff)
-                            Text("팔로잉 목록")
-                                .tabItemFont()
-                        }
-                        .tag(MainCoordinator.Tab.around)
                 }
                 .zIndex(0)
             }
