@@ -65,7 +65,8 @@ extension Project {
             sources: ["Momentree/Sources/**"],
             resources: ["Momentree/Resources/**"],
             dependencies: dependencies,
-            settings: .settings(base: [:], configurations: Configuration.configure(configurations: Configuration.ConfigScheme.allCases)),
+            settings: .settings(base: [:
+            ], configurations: Configuration.configure(configurations: Configuration.ConfigScheme.allCases)),
             coreDataModels: coreDataModels
         )
         

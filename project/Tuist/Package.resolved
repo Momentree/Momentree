@@ -1,5 +1,4 @@
 {
-  "originHash" : "facf809898b15e37e622d9302aeba3bd35fa4cdf1251d434dd5e9aeee8593cfd",
   "pins" : [
     {
       "identity" : "combine-schedulers",
@@ -51,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-composable-architecture.git",
       "state" : {
-        "branch" : "1.10.1",
-        "revision" : "aec373a6cce67facb3d6d30fa2ffcba38f7d082e"
+        "branch" : "1.16.1",
+        "revision" : "69247baf7be2fd6f5820192caef0082d01849cd0"
       }
     },
     {
@@ -92,6 +91,15 @@
       }
     },
     {
+      "identity" : "swift-navigation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-navigation",
+      "state" : {
+        "revision" : "16a27ab7ae0abfefbbcba73581b3e2380b47a579",
+        "version" : "2.2.2"
+      }
+    },
+    {
       "identity" : "swift-perception",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-perception",
@@ -103,19 +111,10 @@
     {
       "identity" : "swift-syntax",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-syntax",
+      "location" : "https://github.com/swiftlang/swift-syntax",
       "state" : {
         "revision" : "2bc86522d115234d1f588efe2bcb4ce4be8f8b82",
         "version" : "510.0.3"
-      }
-    },
-    {
-      "identity" : "swiftui-navigation",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pointfreeco/swiftui-navigation",
-      "state" : {
-        "revision" : "e628806aeaa9efe25c1abcd97931a7c498fab281",
-        "version" : "1.5.5"
       }
     },
     {
@@ -123,8 +122,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/johnpatrickmorgan/TCACoordinators.git",
       "state" : {
-        "branch" : "0.6.0",
-        "revision" : "8edbeb95bf84e091780433f58c790ee992997cd0"
+        "branch" : "0.10.1",
+        "revision" : "8d2b3f9bbb5778fc6a20cde98bb45592e4ef0431"
       }
     },
     {
@@ -137,5 +136,5 @@
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }
