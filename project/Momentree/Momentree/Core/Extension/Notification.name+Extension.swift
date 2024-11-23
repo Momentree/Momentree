@@ -9,9 +9,6 @@ import Foundation
 import UIKit
 
 extension Notification.Name {
-    static let naverLoginComplete = Notification.Name(rawValue: "naverLoginComplete")
-    static let naverLogoutnaverLoginComplete = Notification.Name(rawValue: "naverLogoutComplete")
-    static let keyboardUp = UIResponder.keyboardWillShowNotification
-    static let keyboardDown = UIResponder.keyboardWillHideNotification
-    static let appVersionCheck = Notification.Name(rawValue: "appVersionCheck")
+    static let login = Notification.Name(rawValue: "login")
+    static let signUp = Notification.Name(rawValue: "signUp")
 }

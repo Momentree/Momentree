@@ -43,7 +43,7 @@ struct MainCoordinatorView : View {
                 .zIndex(0)
             }
             .onAppear {
-
+                print("MainCoordinator appear")
             }
             .accentColor(Color(hex: ColorSystem.red.rawValue))
         }

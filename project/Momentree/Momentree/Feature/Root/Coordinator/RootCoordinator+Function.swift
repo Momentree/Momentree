@@ -37,6 +37,9 @@ extension RootCoordinator {
         Reduce { state, action in
             switch action {
                 
+            case .anyAction(.loginComplete), .anyAction(.signupComplete):
+                state.isLogin = true
+                
             default:
                 break
             }

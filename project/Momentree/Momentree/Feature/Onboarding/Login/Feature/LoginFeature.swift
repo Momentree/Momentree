@@ -24,11 +24,14 @@ struct LoginFeature {
         case viewTransition(ViewTransition)
         case buttonTapped(ButtonTapped)
         case networkResponse(NetworkReponse)
+        case anyAction(AnyAction)
     }
     
     enum ViewTransition {
         case onAppear
         case onDisappear
+        
+        case goToMain
     }
     
     enum ButtonTapped {
@@ -39,9 +42,16 @@ struct LoginFeature {
 
     }
     
+    enum AnyAction {
+        case loginComplete
+        case signupComplete
+    }
+    
     var body : some Reducer<State, Action> {
         viewTransitionReducer()
         buttonTappedReducer()
         networkResponseReducer()
+        anyActionReducer()
+        
     }
 }
