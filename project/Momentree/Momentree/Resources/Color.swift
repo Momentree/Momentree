@@ -14,10 +14,13 @@ enum ColorSystem: UInt {
     case backgroundLogin = 0xFBF4EE
     case backgroundMain = 0xA7B5E1
     case treeText = 0x766969
+<<<<<<< HEAD
     case disable = 0xDCDCDC
     case text500 = 0xBAAAAA
     case underline = 0x4C73FF
     case border = 0xEDE3DC
+=======
+>>>>>>> feat/tree
     case objectStroke = 0x8F8F8F
     
     var uIntToString: String {

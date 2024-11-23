@@ -96,12 +96,10 @@
 		A5F9D7782CF21F010003842A /* Loger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D7772CF21F010003842A /* Loger.swift */; };
 		A5F9D77B2CF227E40003842A /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D77A2CF227E40003842A /* Object.swift */; };
 		A5F9D77E2CF22E160003842A /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D77D2CF22E160003842A /* Encodable+Extension.swift */; };
-=======
 		6BFE33972CF250240019AA49 /* ObjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE33962CF250240019AA49 /* ObjectListView.swift */; };
 		6BFE33992CF2502B0019AA49 /* ObjectListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE33982CF2502B0019AA49 /* ObjectListFeature.swift */; };
 		6BFE339B2CF2508A0019AA49 /* ObjectListFeature+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE339A2CF2508A0019AA49 /* ObjectListFeature+Function.swift */; };
 		6BFE339D2CF255190019AA49 /* ObjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE339C2CF255190019AA49 /* ObjectList.swift */; };
->>>>>>> feat/tree
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -195,12 +193,11 @@
 		A5F9D7772CF21F010003842A /* Loger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loger.swift; sourceTree = "<group>"; };
 		A5F9D77A2CF227E40003842A /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		A5F9D77D2CF22E160003842A /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
-=======
 		6BFE33962CF250240019AA49 /* ObjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListView.swift; sourceTree = "<group>"; };
 		6BFE33982CF2502B0019AA49 /* ObjectListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListFeature.swift; sourceTree = "<group>"; };
 		6BFE339A2CF2508A0019AA49 /* ObjectListFeature+Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObjectListFeature+Function.swift"; sourceTree = "<group>"; };
 		6BFE339C2CF255190019AA49 /* ObjectList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectList.swift; sourceTree = "<group>"; };
->>>>>>> feat/tree
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -849,7 +846,8 @@
 =======
 				6BFE33992CF2502B0019AA49 /* ObjectListFeature.swift in Sources */,
 				6BFE339B2CF2508A0019AA49 /* ObjectListFeature+Function.swift in Sources */,
->>>>>>> feat/tree
+				6BFE33992CF2502B0019AA49 /* ObjectListFeature.swift in Sources */,
+				6BFE339B2CF2508A0019AA49 /* ObjectListFeature+Function.swift in Sources */,
 				6B6CC6E82CF20E5900806D8C /* SignView.swift in Sources */,
 				6B6CC6DF2CF20E5900806D8C /* TreeView.swift in Sources */,
 				6BFE336D2CF22D7F0019AA49 /* UIApplication+Extension.swift in Sources */,
