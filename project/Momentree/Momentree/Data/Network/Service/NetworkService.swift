@@ -20,7 +20,7 @@ protocol NetworkServiceProtocol {
      - Returns: 응답 데이터가 디코딩된 모델 객체
      - Throws: 네트워크 요청 실패 시 NetworkError
      */
-    func asyncRequest<T: Decodable, E: ResponseRequestable>(with endPoint: E) async throws(NetworkError) -> T where E.Response == T
+    func asyncRequest<T: Decodable, E: ResponseRequestable>(with endPoint: E) async throws -> T where E.Response == T
 }
 
 final class NetworkService: NetworkServiceProtocol {
@@ -37,7 +37,7 @@ final class NetworkService: NetworkServiceProtocol {
     
     func asyncRequest<T: Decodable, E: ResponseRequestable>(
         with endpoint: E
-    ) async throws(NetworkError) -> T where E.Response == T {
+    ) async throws -> T where E.Response == T {
         do {
             let urlRequest = try endpoint.urlRequest(with: config)
             Logger.network.logRequest(urlRequest)
@@ -56,7 +56,7 @@ final class NetworkService: NetworkServiceProtocol {
             throw error
         }
         catch {
-            throw .error(error.localizedDescription)
+            throw NetworkError.error(error.localizedDescription)
         }
     }
     
@@ -64,9 +64,9 @@ final class NetworkService: NetworkServiceProtocol {
         data: Data,
         response: URLResponse,
         decoder: ResponseDecoderable
-    ) throws(NetworkError) -> T {
+    ) throws -> T {
         guard let response = response as? HTTPURLResponse
-        else { throw .invalidResponse }
+        else { throw NetworkError.invalidResponse }
         
         switch response.statusCode {
         case 200...299:
@@ -74,11 +74,11 @@ final class NetworkService: NetworkServiceProtocol {
                 return try decoder.decode(data)
             }
             catch {
-                throw .invalidFormat
+                throw NetworkError.invalidFormat
             }
 
         default:
-            throw .statusCodeError(
+            throw NetworkError.statusCodeError(
                 code: response.statusCode
             )
         }

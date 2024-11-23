@@ -55,7 +55,7 @@ protocol Requestable {
 extension Requestable {
     func url(
         with config: NetworkConfigurable
-    ) throws(NetworkError) -> URL {
+    ) throws -> URL {
         
         let baseURL: String
         if let baseURLString = baseURLString {
@@ -73,7 +73,7 @@ extension Requestable {
         
         guard var urlComponent = URLComponents(
             string: endpoint
-        ) else { throw .URLError }
+        ) else { throw NetworkError.URLError }
         
         var urlQueryItems = [URLQueryItem]()
         
@@ -109,7 +109,7 @@ extension Requestable {
     
     func urlRequest(
         with config: NetworkConfigurable
-    ) throws(NetworkError) -> URLRequest {
+    ) throws -> URLRequest {
         let url = try self.url(with: config)
         var urlRequest = URLRequest(url: url)
         var header = config.header

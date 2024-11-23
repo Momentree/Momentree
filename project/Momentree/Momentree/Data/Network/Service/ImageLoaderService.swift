@@ -23,7 +23,7 @@ protocol ImageLoaderServiceProtocol {
      - Returns: 로드된 UIImage 객체
      - Throws: 이미지 로드 실패 시 ImageLoaderError
      */
-    func load(url: NSURL) async throws(ImageLoaderError) -> UIImage
+    func load(url: NSURL) async throws -> UIImage
 }
 
 /**
@@ -92,7 +92,7 @@ final class ImageLoaderService: ImageLoaderServiceProtocol {
         cachedImages.object(forKey: url)
     }
     
-    func load(url: NSURL) async throws(ImageLoaderError) -> UIImage {
+    func load(url: NSURL) async throws -> UIImage {
         if let cachedImage = getImage(url: url) {
             return cachedImage
         }
