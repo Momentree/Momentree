@@ -44,5 +44,17 @@ extension LoginFeature {
             return .none
         }
     }
+    
+    func anyActionReducer() -> some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+                
+            default:
+                break
+            }
+            
+            return .none
+        }
+    }
 }
 
