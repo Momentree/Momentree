@@ -173,12 +173,12 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
             
             if let data = data, let responseString = String(data: data, encoding: .utf8) {
                 print("Response data: \(responseString)")
-                
                 let parser = JSONParser()
                 if let response = parser.parseLoginResponse(from: responseString) {
                     self.userToken = response.accessToken
                     print("Access Token: \(response.accessToken)")
                     print("User ID: \(response.userId)")
+                    NotificationCenter.default.post(name: .login, object: nil)
                 } else {
                     print("Failed to parse login response.")
                 }
@@ -221,4 +221,3 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
         }
     }
 }
-

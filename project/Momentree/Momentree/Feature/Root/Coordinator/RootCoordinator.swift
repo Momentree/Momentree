@@ -15,6 +15,7 @@ struct RootCoordinator {
         static let initialState = State(main: .initialState, onboarding: .initialState)
         var main : MainCoordinator.State
         var onboarding : OnboardingCoordinator.State
+        var isLogin : Bool = false
     }
     
     enum Action : BindableAction {
@@ -35,6 +36,8 @@ struct RootCoordinator {
     }
     
     enum AnyAction {
+        case loginComplete
+        case signupComplete
     }
     
     var body : some ReducerOf<Self>  {

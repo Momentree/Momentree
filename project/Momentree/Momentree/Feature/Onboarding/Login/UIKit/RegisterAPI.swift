@@ -47,6 +47,8 @@ class RegisterAPI {
 
             if let data = data, let responseString = String(data: data, encoding: .utf8) {
                 print("Response data: \(responseString)")
+                NotificationCenter.default.post(name: .signUp, object: nil)
+                
             }
         }
 
