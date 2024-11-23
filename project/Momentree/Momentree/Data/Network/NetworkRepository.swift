@@ -25,7 +25,7 @@ final class NetworkRepository: NetworkRepositoryProtocol {
     let networkService = NetworkService(
         config: NetworkConfiguration(
             baseURL: "http://ec2-184-73-145-160.compute-1.amazonaws.com:8080",
-            header: [:],
+            header: ["Content-Type":"application/json"],
             queryParameters: [:]
         )
     )

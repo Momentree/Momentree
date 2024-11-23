@@ -14,7 +14,7 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
     @IBOutlet weak var IDField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     
-    private var userToken:String = ""
+    static var userToken:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +82,7 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         // ** Add token if required **
-        let token = userToken // Replace with your actual token
+        let token = LoginVC.userToken // Replace with your actual token
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 
         
@@ -116,8 +116,8 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
                 
                 let parser = JSONParser()
                 if let response = parser.parseLoginResponse(from: responseString) {
-                    self.userToken = response.accessToken
-                    print("Access Token: \(response.accessToken)")
+                    LoginVC.userToken = response.accessToken
+                    
                     print("User ID: \(response.userId)")
                 } else {
                     print("Failed to parse login response.")
@@ -142,7 +142,7 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         // ** Add token if required **
-        let token = userToken // Replace with your actual token
+        let token = LoginVC.userToken // Replace with your actual token
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 
         
@@ -175,7 +175,7 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
                 print("Response data: \(responseString)")
                 let parser = JSONParser()
                 if let response = parser.parseLoginResponse(from: responseString) {
-                    self.userToken = response.accessToken
+                    LoginVC.userToken = response.accessToken
                     print("Access Token: \(response.accessToken)")
                     print("User ID: \(response.userId)")
                     NotificationCenter.default.post(name: .login, object: nil)

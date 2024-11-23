@@ -115,7 +115,7 @@ extension Requestable {
         var header = config.header
         headerParameters.forEach { header.updateValue($1, forKey: $0) }
         
-        urlRequest.addValue("Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiaWF0IjoxNzMyMzk0ODkzLCJleHAiOjE3MzIzOTg0OTN9.pZWFIHTKLIjFPsFsNFZhYQDPhq7aIOFDJOmgohcUgWo", forHTTPHeaderField: "Authorization")
+        urlRequest.addValue("Bearer \(LoginVC.userToken)", forHTTPHeaderField: "Authorization")
         
         let bodyParameters = bodyParametersEncodable?.toDictionary ?? self.bodyParameters
         if bodyParameters.isEmpty == false {
