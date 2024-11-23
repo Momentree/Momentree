@@ -14,6 +14,7 @@ struct DiaryFeature {
     @ObservableState
     struct State : Equatable {
         let id = UUID()
+        var content: String = ""
     }
     
     enum Action : BindableAction {

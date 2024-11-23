@@ -17,6 +17,7 @@ enum ColorSystem: UInt {
     case disable = 0xDCDCDC
     case text500 = 0xBAAAAA
     case underline = 0x4C73FF
+    case border = 0xEDE3DC
     
     var uIntToString: String {
         return String(format: "%06X", self.rawValue)
