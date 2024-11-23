@@ -81,7 +81,6 @@
 		6BFE33902CF22DE10019AA49 /* RedactedModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE33862CF22DE10019AA49 /* RedactedModifier.swift */; };
 		6BFE33912CF22DE10019AA49 /* DynamicFontSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE33822CF22DE10019AA49 /* DynamicFontSizeModifier.swift */; };
 		6BFE33922CF22DE10019AA49 /* FontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE33812CF22DE10019AA49 /* FontModifier.swift */; };
-<<<<<<< HEAD
 		A5F9D75F2CF2189B0003842A /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D75E2CF2189B0003842A /* NetworkRepository.swift */; };
 		A5F9D7622CF219270003842A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D7612CF219270003842A /* NetworkService.swift */; };
 		A5F9D7652CF219660003842A /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D7642CF219660003842A /* Decodable.swift */; };
@@ -177,7 +176,6 @@
 		6BFE33842CF22DE10019AA49 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		6BFE33852CF22DE10019AA49 /* TextBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBackgroundModifier.swift; sourceTree = "<group>"; };
 		6BFE33862CF22DE10019AA49 /* RedactedModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedactedModifier.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		A55153CB2CF2752D00F7F317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A5F9D75E2CF2189B0003842A /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
 		A5F9D7612CF219270003842A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -841,9 +839,7 @@
 				6B6CC6DB2CF20E5900806D8C /* TreeScreen.swift in Sources */,
 				A5F9D7692CF2199C0003842A /* APIEndPoints.swift in Sources */,
 				6B6CC6E92CF20E5900806D8C /* RootCoordinator.swift in Sources */,
-<<<<<<< HEAD
 				A5F9D77B2CF227E40003842A /* Object.swift in Sources */,
-=======
 				6BFE33992CF2502B0019AA49 /* ObjectListFeature.swift in Sources */,
 				6BFE339B2CF2508A0019AA49 /* ObjectListFeature+Function.swift in Sources */,
 				6BFE33992CF2502B0019AA49 /* ObjectListFeature.swift in Sources */,
