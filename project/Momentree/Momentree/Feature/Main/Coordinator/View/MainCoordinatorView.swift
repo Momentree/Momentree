@@ -17,19 +17,25 @@ struct MainCoordinatorView : View {
                 TabView(selection: $store.selectedTab.sending(\.tabSelected)) {
                     CalendarCoordinatorView(store: store.scope(state: \.calendar, action: \.calendar))
                         .tabItem {
+                            Image(store.selectedTab == .calendar ? .calendarOn : .calendarOff)
                             Text("달력")
+                                .tabItemFont()
                         }
                         .tag(MainCoordinator.Tab.calendar)
                     
                     TreeCoordinatorView(store: store.scope(state: \.tree, action: \.tree))
                         .tabItem {
-                            Text("크리스마스 트리")
+                            Image(store.selectedTab == .tree ? .treeOn : .treeOff)
+                            Text("트리")
+                                .tabItemFont()
                         }
                         .tag(MainCoordinator.Tab.tree)
                     
                     AroundCoordinatorView(store: store.scope(state: \.around, action: \.around))
                         .tabItem {
-                            Text("둘러보기")
+                            Image(store.selectedTab == .around ? .followOn : .followOff)
+                            Text("팔로잉 목록")
+                                .tabItemFont()
                         }
                         .tag(MainCoordinator.Tab.around)
                 }
@@ -38,6 +44,7 @@ struct MainCoordinatorView : View {
             .onAppear {
 
             }
+            .accentColor(Color(hex: ColorSystem.red.rawValue))
         }
     }
 }
