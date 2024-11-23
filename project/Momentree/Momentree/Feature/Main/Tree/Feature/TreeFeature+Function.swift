@@ -43,6 +43,10 @@ extension TreeFeature {
             case .buttonTapped(.objectCancel):
                 state.editMode = false
                 
+            case let .buttonTapped(.objectSave(object)):
+                state.objectServer = object
+                state.editMode = false                
+                
             default:
                 break
             }
@@ -60,7 +64,9 @@ extension TreeFeature {
                            
             case let .anyAction(.receiveImage((position, objectId))):
                 state.object[position] = objectId
-                break
+                
+            case let .anyAction(.removeImage((position, _))):
+                state.object[position] = .init()
                 
             default:
                 break

@@ -17,6 +17,7 @@ struct TreeFeature {
         var userId : String = "ID"
         var editMode : Bool = false
         var object: [Int : String] = [:]
+        var objectServer:[Int : String] = [:]
         
         var objectViewoffsetY: CGFloat = 400
     }
@@ -34,7 +35,7 @@ struct TreeFeature {
     }
     
     enum ButtonTapped {
-        case objectSave
+        case objectSave([Int : String])
         case objectCancel
     }
     
@@ -46,6 +47,7 @@ struct TreeFeature {
     enum AnyAction {
         case objectPosition(Int)
         case receiveImage((Int, String))
+        case removeImage((Int, String))
     }
     
     var body : some ReducerOf<Self> {

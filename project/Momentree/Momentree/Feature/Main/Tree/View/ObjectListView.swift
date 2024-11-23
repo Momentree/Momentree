@@ -32,6 +32,7 @@ struct ObjectListView: View {
                             .frame(width: 56, height: 56)
                             .onTapGesture {
                                 store.send(.buttonTapped(.objectSelected(((store.position, image)))))
+                                
                             }
                     }
                     .background(Color.clear)
