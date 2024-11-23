@@ -42,6 +42,7 @@ struct CalendarView: View {
                         cell: cell,
                         buttonHandler: { id in
                             // TODO: 연결
+                            print("Calendaer")
                             store.send(.viewTransition(.sendDayToDiary(id)))
                         })
                 }

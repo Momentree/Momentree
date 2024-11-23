@@ -47,6 +47,9 @@ struct DiaryFeature {
     var body : some ReducerOf<Self> {
         BindingReducer()
         
+        viewTransitionReducer()
+        networkResponseReducer()
+        buttonTappedReducer()
         anyActionReducer()
     }
 }
