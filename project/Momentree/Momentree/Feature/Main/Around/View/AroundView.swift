@@ -14,7 +14,26 @@ struct AroundView: View {
     var body: some View {
         WithPerceptionTracking {
             VStack {
-                Text("둘러보기")
+                HStack(spacing: 0) {
+                    Spacer()
+                        .frame(width: 16)
+//                    TextField("아이디를 입력해주세요", text: $store.userId)
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "magnifyingglass")
+                            .frame(width: 48, height: 48)
+                    }
+                    
+                }
+                .frame(height: 56)
+                .background(.white)
+                .overlay(
+                    Capsule(style: .circular)
+                        .stroke(Color.black, lineWidth: 1)
+                )
+                .clipShape(Capsule(style: .circular))
+                .padding(.horizontal, 20)
             }
             .onAppear {
                 
