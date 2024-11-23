@@ -12,6 +12,7 @@ struct TreeView: View {
     @State var store : StoreOf<TreeFeature>
     
     var body: some View {
+        
         WithPerceptionTracking {
             ZStack {
                 Color(hex: ColorSystem.backgroundMain.rawValue)

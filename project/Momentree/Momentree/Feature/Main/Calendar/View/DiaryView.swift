@@ -14,7 +14,7 @@ struct DiaryView: View {
     var body: some View {
         WithPerceptionTracking {
             VStack {
-                
+                Text("달력")
             }
             .onAppear {
                 
