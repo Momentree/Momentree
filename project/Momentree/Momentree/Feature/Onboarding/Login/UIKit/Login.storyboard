@@ -225,6 +225,7 @@
                                                     <color key="titleColor" red="0.33333334329999997" green="0.44705885649999999" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="backBtn:" destination="ugi-o0-NPc" eventType="touchUpInside" id="Ytz-2L-T09"/>
                                                     <action selector="tappedRegisterBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="b93-S9-49m"/>
                                                 </connections>
                                             </button>

@@ -49,4 +49,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     @IBAction func tappedRegisterBtn(_ sender: UIButton) {
         registerAPI.signUpUser(loginId: IDField.text!, password: PWField.text!)
     }
+    @IBAction func backBtn(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
 }
