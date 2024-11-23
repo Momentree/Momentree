@@ -14,6 +14,7 @@ struct CalendarFeature {
     @ObservableState
     struct State : Equatable {
         let id = UUID()
+        var objects = [Object]()
     }
     
     enum Action : BindableAction {
@@ -25,7 +26,7 @@ struct CalendarFeature {
     }
     
     enum NetworkReponse {
-        
+        case getList([Object])
     }
     
     enum ButtonTapped {
@@ -34,11 +35,14 @@ struct CalendarFeature {
     
     enum ViewTransition {
         case sendDayToDiary(Int)
+        case onAppear
     }
     
     enum AnyAction {
 
     }
+    
+    @Dependency(\.networkRepository) var networkRepository
     
     var body : some ReducerOf<Self> {
         BindingReducer()
@@ -46,5 +50,6 @@ struct CalendarFeature {
         viewTransitionReducer()
         networkResponseReducer()
         buttonTappedReducer()
+        viewTransitionReducer()
     }
 }

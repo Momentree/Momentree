@@ -16,13 +16,16 @@ protocol NetworkRepositoryProtocol {
     func update(
         object: Object
     ) async throws
+    
+    func getList(
+    ) async throws -> [Object]
 }
 
 final class NetworkRepository: NetworkRepositoryProtocol {
     let networkService = NetworkService(
         config: NetworkConfiguration(
             baseURL: "http://ec2-184-73-145-160.compute-1.amazonaws.com:8080",
-            header: [:],
+            header: ["Authorization":"Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiaWF0IjoxNzMyMzk0ODkzLCJleHAiOjE3MzIzOTg0OTN9.pZWFIHTKLIjFPsFsNFZhYQDPhq7aIOFDJOmgohcUgWo"],
             queryParameters: [:]
         )
     )
@@ -46,6 +49,12 @@ final class NetworkRepository: NetworkRepositoryProtocol {
         let reqeust = UpdateObjectRequest(id: object.day, content: object.content)
         let endPoint = APIEndPoints.updateObject(request: reqeust)
         let result = try await networkService.asyncRequest(with: endPoint)
+    }
+    
+    func getList() async throws -> [Object] {
+        let request = ObjectContentListRequest()
+        let endPoint = APIEndPoints.getObjectList()
+        return try await networkService.asyncRequest(with: endPoint).list
     }
 }
 

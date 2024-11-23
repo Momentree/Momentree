@@ -50,6 +50,7 @@ struct CalendarCoordinator {
             
             case .router(.routeAction(id: .diary, action: .diary(.viewTransition(.goBack)))):
                 state.routes.goBack()
+                // TODO: 이미지 배치 API
                 
             default :
                 break

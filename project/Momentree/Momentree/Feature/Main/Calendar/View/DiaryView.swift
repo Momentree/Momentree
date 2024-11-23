@@ -20,23 +20,23 @@ struct DiaryView: View {
                     }
                     .frame(width: 50)
                     Spacer()
-                    
                     Button("저장") {
                         store.send(.buttonTapped(.create))
                     }
+                    .disabled(store.content.isEmpty)
+                    .opacity(store.content.isEmpty ? 0.3 : 1)
                 }
                 .frame(height: 32)
                 .font(.system(size: 16, weight: .bold))
                 .fontModifier(fontSize: 16, weight: .bold, color: ColorSystem.treeText.rawValue)
-                
                 Spacer()
                     .frame(height: 20)
-                Text("13일 금요일")
+                Text("\(store.day)일 금요일")
                     .foregroundColor(.red)
                     .fontModifier(fontSize: 16, weight: .bold, color: ColorSystem.red.rawValue)
                 Spacer()
                     .frame(height: 16)
-                Image(systemName: "gift.circle")
+                Image("object\(store.day)")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 60, height: 60)
@@ -65,7 +65,9 @@ struct DiaryView: View {
 // (빨간색)
 
 #Preview {
-    DiaryView(store: .init(initialState: .init(), reducer: {
+    DiaryView(store: .init(
+        initialState: .init(day: 1)
+        , reducer: {
         DiaryFeature()
     }))
 }
