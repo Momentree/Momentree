@@ -49,6 +49,19 @@
 		6B6CC6EB2CF20E5900806D8C /* RootCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6CC6C42CF20E5900806D8C /* RootCoordinatorView.swift */; };
 		6B6CC6EE2CF20EB600806D8C /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 6B6CC6ED2CF20EB600806D8C /* TCACoordinators */; };
 		6B6CC6F12CF20EBF00806D8C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 6B6CC6F02CF20EBF00806D8C /* ComposableArchitecture */; };
+		A5F9D75F2CF2189B0003842A /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D75E2CF2189B0003842A /* NetworkRepository.swift */; };
+		A5F9D7622CF219270003842A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D7612CF219270003842A /* NetworkService.swift */; };
+		A5F9D7652CF219660003842A /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D7642CF219660003842A /* Decodable.swift */; };
+		A5F9D7672CF219760003842A /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D7662CF219760003842A /* Encodable.swift */; };
+		A5F9D7692CF2199C0003842A /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D7682CF2199C0003842A /* APIEndPoints.swift */; };
+		A5F9D76B2CF219C90003842A /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D76A2CF219C90003842A /* EndPoint.swift */; };
+		A5F9D76D2CF219FA0003842A /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D76C2CF219FA0003842A /* NetworkConfiguration.swift */; };
+		A5F9D76F2CF21A270003842A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D76E2CF21A270003842A /* NetworkError.swift */; };
+		A5F9D7712CF21A490003842A /* NetworkDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D7702CF21A490003842A /* NetworkDTO.swift */; };
+		A5F9D7732CF21BF20003842A /* ImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D7722CF21BF20003842A /* ImageLoaderService.swift */; };
+		A5F9D7752CF21D7D0003842A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D7742CF21D7D0003842A /* Session.swift */; };
+		A5F9D7782CF21F010003842A /* Loger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D7772CF21F010003842A /* Loger.swift */; };
+		A5F9D77B2CF227E40003842A /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D77A2CF227E40003842A /* Object.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +106,19 @@
 		6B6CC6C12CF20E5900806D8C /* RootCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		6B6CC6C22CF20E5900806D8C /* RootCoordinator+Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RootCoordinator+Function.swift"; sourceTree = "<group>"; };
 		6B6CC6C42CF20E5900806D8C /* RootCoordinatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinatorView.swift; sourceTree = "<group>"; };
+		A5F9D75E2CF2189B0003842A /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
+		A5F9D7612CF219270003842A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A5F9D7642CF219660003842A /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
+		A5F9D7662CF219760003842A /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		A5F9D7682CF2199C0003842A /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
+		A5F9D76A2CF219C90003842A /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		A5F9D76C2CF219FA0003842A /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
+		A5F9D76E2CF21A270003842A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A5F9D7702CF21A490003842A /* NetworkDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDTO.swift; sourceTree = "<group>"; };
+		A5F9D7722CF21BF20003842A /* ImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderService.swift; sourceTree = "<group>"; };
+		A5F9D7742CF21D7D0003842A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		A5F9D7772CF21F010003842A /* Loger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loger.swift; sourceTree = "<group>"; };
+		A5F9D77A2CF227E40003842A /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +153,9 @@
 		6B6CC6792CF20E4500806D8C /* Momentree */ = {
 			isa = PBXGroup;
 			children = (
+				A5F9D7792CF227DC0003842A /* Model */,
+				A5F9D7762CF21E6E0003842A /* Utils */,
+				A5F9D75B2CF218650003842A /* Data */,
 				6B6CC6C72CF20E5900806D8C /* Feature */,
 				6B6CC67A2CF20E4500806D8C /* MomentreeApp.swift */,
 				6B6CC67C2CF20E4500806D8C /* ContentView.swift */,
@@ -403,6 +432,72 @@
 			path = Feature;
 			sourceTree = "<group>";
 		};
+		A5F9D75B2CF218650003842A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A5F9D75C2CF2187A0003842A /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A5F9D75C2CF2187A0003842A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A5F9D75D2CF2188B0003842A /* Service */,
+				A5F9D75E2CF2189B0003842A /* NetworkRepository.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A5F9D75D2CF2188B0003842A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A5F9D7602CF219090003842A /* Define */,
+				A5F9D7612CF219270003842A /* NetworkService.swift */,
+				A5F9D7722CF21BF20003842A /* ImageLoaderService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A5F9D7602CF219090003842A /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				A5F9D7632CF219540003842A /* Codable */,
+				A5F9D7682CF2199C0003842A /* APIEndPoints.swift */,
+				A5F9D76A2CF219C90003842A /* EndPoint.swift */,
+				A5F9D76C2CF219FA0003842A /* NetworkConfiguration.swift */,
+				A5F9D76E2CF21A270003842A /* NetworkError.swift */,
+				A5F9D7702CF21A490003842A /* NetworkDTO.swift */,
+				A5F9D7742CF21D7D0003842A /* Session.swift */,
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		A5F9D7632CF219540003842A /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				A5F9D7642CF219660003842A /* Decodable.swift */,
+				A5F9D7662CF219760003842A /* Encodable.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
+		A5F9D7762CF21E6E0003842A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A5F9D7772CF21F010003842A /* Loger.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A5F9D7792CF227DC0003842A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5F9D77A2CF227E40003842A /* Object.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -482,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B6CC6DD2CF20E5900806D8C /* TreeFeature.swift in Sources */,
+				A5F9D7782CF21F010003842A /* Loger.swift in Sources */,
 				6B6CC6D82CF20E5900806D8C /* MainCoordinator+Function.swift in Sources */,
 				6B6CC6EA2CF20E5900806D8C /* RootCoordinator+Function.swift in Sources */,
 				6B6CC6E32CF20E5900806D8C /* LoginFeature.swift in Sources */,
@@ -491,31 +587,43 @@
 				6B6CC6D52CF20E5900806D8C /* CalendarView.swift in Sources */,
 				6B6CC6E72CF20E5900806D8C /* SignFeature+Function.swift in Sources */,
 				6B6CC6EB2CF20E5900806D8C /* RootCoordinatorView.swift in Sources */,
+				A5F9D7622CF219270003842A /* NetworkService.swift in Sources */,
 				6B6CC6E62CF20E5900806D8C /* SignFeature.swift in Sources */,
 				6B6CC6DA2CF20E5900806D8C /* TreeCoordinator.swift in Sources */,
+				A5F9D7712CF21A490003842A /* NetworkDTO.swift in Sources */,
+				A5F9D7752CF21D7D0003842A /* Session.swift in Sources */,
 				6B6CC6CE2CF20E5900806D8C /* CalendarCoordinator.swift in Sources */,
 				6B6CC6C92CF20E5900806D8C /* AroundScreen.swift in Sources */,
 				6B6CC6CB2CF20E5900806D8C /* AroundFeature.swift in Sources */,
 				6B6CC6CC2CF20E5900806D8C /* AroundFeature+Function.swift in Sources */,
+				A5F9D7652CF219660003842A /* Decodable.swift in Sources */,
 				6B6CC6E42CF20E5900806D8C /* LoginFeature+Function.swift in Sources */,
 				6B6CC6DB2CF20E5900806D8C /* TreeScreen.swift in Sources */,
+				A5F9D7692CF2199C0003842A /* APIEndPoints.swift in Sources */,
 				6B6CC6E92CF20E5900806D8C /* RootCoordinator.swift in Sources */,
+				A5F9D77B2CF227E40003842A /* Object.swift in Sources */,
 				6B6CC6E82CF20E5900806D8C /* SignView.swift in Sources */,
 				6B6CC6DF2CF20E5900806D8C /* TreeView.swift in Sources */,
 				6B6CC6D72CF20E5900806D8C /* MainCoordinator.swift in Sources */,
+				A5F9D76F2CF21A270003842A /* NetworkError.swift in Sources */,
 				6B6CC6D42CF20E5900806D8C /* DiaryFeature+Function.swift in Sources */,
+				A5F9D76B2CF219C90003842A /* EndPoint.swift in Sources */,
 				6B6CC6D12CF20E5900806D8C /* CalendarFeature.swift in Sources */,
+				A5F9D7732CF21BF20003842A /* ImageLoaderService.swift in Sources */,
 				6B6CC6D22CF20E5900806D8C /* CalendarFeature+Function.swift in Sources */,
 				6B6CC6E22CF20E5900806D8C /* OnboardingScreen+Identifiable.swift in Sources */,
 				6B6CC6E12CF20E5900806D8C /* OnboardingCoordinator.swift in Sources */,
 				6B6CC6D32CF20E5900806D8C /* DiaryFeature.swift in Sources */,
 				6B6CC6D62CF20E5900806D8C /* DiaryView.swift in Sources */,
+				A5F9D75F2CF2189B0003842A /* NetworkRepository.swift in Sources */,
+				A5F9D7672CF219760003842A /* Encodable.swift in Sources */,
 				6B6CC67B2CF20E4500806D8C /* MomentreeApp.swift in Sources */,
 				6B6CC6D02CF20E5900806D8C /* CalendarScreen+Identifiable.swift in Sources */,
 				6B6CC6D92CF20E5900806D8C /* MainCoordinatorView.swift in Sources */,
 				6B6CC6CF2CF20E5900806D8C /* CalendarScreen.swift in Sources */,
 				6B6CC6E02CF20E5900806D8C /* OnbaordingScreen.swift in Sources */,
 				6B6CC6DC2CF20E5900806D8C /* TreeScreen+Identifiable.swift in Sources */,
+				A5F9D76D2CF219FA0003842A /* NetworkConfiguration.swift in Sources */,
 				6B6CC6CA2CF20E5900806D8C /* AroundScreen+Identifiable.swift in Sources */,
 				6B6CC6E52CF20E5900806D8C /* LoginView.swift in Sources */,
 				6B6CC6CD2CF20E5900806D8C /* AroundView.swift in Sources */,
