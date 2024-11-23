@@ -6,19 +6,60 @@
 //
 
 import Foundation
+import ComposableArchitecture
 
 protocol NetworkRepositoryProtocol {
-    func signUp(
-        loginId: String,
-        password: String
-    )
+    func create(
+        object: Object
+    )  async throws -> Result<CreateObjectResponse, NetworkError>
     
-    func signIn(
-        loginId: String,
-        password: String
-    )
+    func update(
+        object: Object
+    ) async throws
 }
 
-// 유저 아이디 :
-// 보낼 때 1~18
-// 캘린던 day -: (1)
+final class NetworkRepository: NetworkRepositoryProtocol {
+    let networkService = NetworkService(
+        config: NetworkConfiguration(
+            baseURL: "http://ec2-184-73-145-160.compute-1.amazonaws.com:8080",
+            header: [:],
+            queryParameters: [:]
+        )
+    )
+    
+    func create(object: Object) async throws -> Result<CreateObjectResponse, NetworkError> {
+        do {
+            let reqeust = CreateObjectRequest(content: object.content)
+            let endPoint = APIEndPoints.createObject(
+                request: reqeust,
+                path: "\(object.day)"
+            )
+            let result = try await networkService.asyncRequest(with: endPoint)
+            return .success(result)
+        }
+        catch {
+            throw NetworkError.URLError
+        }
+    }
+    
+    func update(object: Object) async throws {
+        let reqeust = UpdateObjectRequest(id: object.day, content: object.content)
+        let endPoint = APIEndPoints.updateObject(request: reqeust)
+        let result = try await networkService.asyncRequest(with: endPoint)
+    }
+}
+
+extension NetworkRepository {
+    
+}
+
+private enum NetworkRepositoryKey: DependencyKey {
+    static var liveValue: NetworkRepository = NetworkRepository()
+}
+
+extension DependencyValues {
+    var networkRepository: NetworkRepository {
+        get { self[NetworkRepositoryKey.self] }
+        set { self[NetworkRepositoryKey.self] = newValue }
+    }
+}

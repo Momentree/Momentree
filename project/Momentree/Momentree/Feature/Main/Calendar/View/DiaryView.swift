@@ -13,12 +13,60 @@ struct DiaryView: View {
     
     var body: some View {
         WithPerceptionTracking {
-            VStack {
-                Text("달력")
+            VStack(alignment: .center, spacing: 0) {
+                HStack {
+                    Button("취소") {
+                        
+                    }
+                    .frame(width: 50)
+                    Spacer()
+                    
+                    Button("저장") {
+                        
+                    }
+                }
+                .frame(height: 32)
+                .font(.system(size: 16, weight: .bold))
+                .fontModifier(fontSize: 16, weight: .bold, color: ColorSystem.treeText.rawValue)
+                
+                Spacer()
+                    .frame(height: 20)
+                Text("13일 금요일")
+                    .foregroundColor(.red)
+                    .fontModifier(fontSize: 16, weight: .bold, color: ColorSystem.red.rawValue)
+                Spacer()
+                    .frame(height: 16)
+                Image(systemName: "gift.circle")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 60, height: 60)
+                    .foregroundColor(.gray)
+                Spacer()
+                    .frame(height: 20)
+                
+                TextField(
+                    "하루를 기록해주세요.",
+                    text: $store.content,
+                    axis: .vertical
+                )
+                    .lineLimit(1...10) // 최소 5줄, 최대 10줄
+                    .padding()
+                Spacer()
             }
+            .padding(.horizontal, 10)
             .onAppear {
                 
             }
         }
     }
 }
+
+// 12월 1일
+// (빨간색)
+
+#Preview {
+    DiaryView(store: .init(initialState: .init(), reducer: {
+        DiaryFeature()
+    }))
+}
+
