@@ -16,16 +16,18 @@ struct CalendarView: View {
 //        StoryboardRepresentable()
 //            .ignoresSafeArea(edges: .top)
         
-        WithPerceptionTracking {
-            VStack {
-                Text("달력")
-                
-                Button("다이러이 이동") {
-                    store.send(.buttonTapped(.goToDiary))
-                }
-            }
-            .onAppear {
-            }
-        }
+        LoginRepresentable().ignoresSafeArea(edges: .top)
+        
+//        WithPerceptionTracking {
+//            VStack {
+//                Text("달력")
+//                
+//                Button("다이러이 이동") {
+//                    store.send(.buttonTapped(.goToDiary))
+//                }
+//            }
+//            .onAppear {
+//            }
+//        }
     }
 }
