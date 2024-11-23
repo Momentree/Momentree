@@ -9,6 +9,11 @@ import SwiftUI
 
 enum ColorSystem: UInt {
     case red = 0xE86161
+    case red2 = 0xBB4444
+    case black = 0x2D2D2D
+    case backgroundLogin = 0xFBF4EE
+    case backgroundMain = 0xA7B5E1
+    case treeText = 0x766969
     
     var uIntToString: String {
         return String(format: "%06X", self.rawValue)
