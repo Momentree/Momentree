@@ -12,11 +12,14 @@ extension TreeScreen.State : Identifiable {
         switch self {
         case .tree:
                 .tree
+        case .objectAdd:
+                .objectAdd
         }
     }
     
     enum ID : Identifiable {
         case tree
+        case objectAdd
         var id: ID { self }
     }
 }

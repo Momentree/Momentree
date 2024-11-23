@@ -14,6 +14,7 @@ enum ColorSystem: UInt {
     case backgroundLogin = 0xFBF4EE
     case backgroundMain = 0xA7B5E1
     case treeText = 0x766969
+    case objectStroke = 0x8F8F8F
     
     var uIntToString: String {
         return String(format: "%06X", self.rawValue)

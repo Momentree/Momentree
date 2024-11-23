@@ -17,6 +17,8 @@ struct TreeCoordinatorView : View {
             switch screen.case {
             case let .tree(store):
                 TreeView(store: store)
+            case let .objectAdd(store):
+                ObjectListView(store: store)
             }
         }
     }
@@ -38,6 +40,15 @@ struct TreeCoordinator {
     var body : some ReducerOf<Self> {
         Reduce<State, Action> { state, action in
             switch action {
+            case let .router(.routeAction(id: .tree, action: .tree(.viewTransition(.objectAdd(position))))):
+                state.routes.presentSheet(.objectAdd(.init(position:position)))
+                
+            case let .router(.routeAction(id: .objectAdd, action: .objectAdd(.buttonTapped(.objectSelected((position, objectId)))))):
+                                
+                state.routes.dismiss()
+                
+                return .send(.router(.routeAction(id: .tree, action: .tree(.anyAction(.receiveImage((position, objectId)))))))
+                
             default :
                 break
             }

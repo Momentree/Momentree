@@ -50,4 +50,23 @@ extension TreeFeature {
             return .none
         }
     }
+    
+    func anyActionReducer() -> some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+                
+            case let .anyAction(.objectPosition(position)):
+                state.object[position] = .init()
+                           
+            case let .anyAction(.receiveImage((position, objectId))):
+                state.object[position] = objectId
+                break
+                
+            default:
+                break
+            }
+            
+            return .none
+        }
+    }
 }

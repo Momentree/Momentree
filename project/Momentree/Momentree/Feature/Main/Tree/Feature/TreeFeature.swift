@@ -16,6 +16,9 @@ struct TreeFeature {
         let id = UUID()
         var userId : String = "ID"
         var editMode : Bool = false
+        var object: [Int : String] = [:]
+        
+        var objectViewoffsetY: CGFloat = 400
     }
     
     enum Action : BindableAction {
@@ -37,10 +40,12 @@ struct TreeFeature {
     
     enum ViewTransition {
         case editMode
+        case objectAdd(Int)
     }
     
     enum AnyAction {
-
+        case objectPosition(Int)
+        case receiveImage((Int, String))
     }
     
     var body : some ReducerOf<Self> {
@@ -49,5 +54,6 @@ struct TreeFeature {
         viewTransitionReducer()
         networkResponseReducer()
         buttonTappedReducer()
+        anyActionReducer()
     }
 }

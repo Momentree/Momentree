@@ -11,4 +11,5 @@ import ComposableArchitecture
 @Reducer(state: .equatable)
 enum TreeScreen {
     case tree(TreeFeature)
+    case objectAdd(ObjectListFeature)
 }
