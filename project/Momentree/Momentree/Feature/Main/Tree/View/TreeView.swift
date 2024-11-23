@@ -65,6 +65,7 @@ struct TreeView: View {
                 }
                 
             }
+            .animation(.easeIn(duration: 0.2), value: store.editMode)
         }
     }
 }
