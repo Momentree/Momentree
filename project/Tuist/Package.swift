@@ -15,7 +15,13 @@ let packageSettings = PackageSettings(
 let package = Package(
   name: "Momentree",
   dependencies: [
-    .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", branch: "1.10.1"),
-    .package(url: "https://github.com/johnpatrickmorgan/TCACoordinators.git", from: "0.6.0")
+    .package(
+        url: "https://github.com/pointfreeco/swift-composable-architecture.git",
+        branch: "1.16.1"
+    ),
+    .package(
+        url: "https://github.com/johnpatrickmorgan/TCACoordinators.git",
+        branch: "0.10.1"
+    )
   ]
 )
