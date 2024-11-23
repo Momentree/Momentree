@@ -8,10 +8,6 @@
 import Foundation
 
 struct Object {
-    var title: String
-    var date: Date
+    var day: Int
     var content: String
-    var openStatus: Bool // OPEN / "CLOSE"
-    var imageURL: String // TODO: 3차 개발
-    var position: Int?
 }

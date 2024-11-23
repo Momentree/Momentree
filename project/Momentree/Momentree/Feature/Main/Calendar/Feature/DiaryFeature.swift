@@ -10,11 +10,11 @@ import ComposableArchitecture
 
 @Reducer
 struct DiaryFeature {
-    
     @ObservableState
     struct State : Equatable {
         let id = UUID()
         var content: String = ""
+        var day: Int = 0 // FIXME:
     }
     
     enum Action : BindableAction {
@@ -26,11 +26,12 @@ struct DiaryFeature {
     }
     
     enum NetworkReponse {
-        
+        case create(Result<CreateObjectResponse, NetworkError>)
     }
-    
-    enum ButtonTapped {
 
+    enum ButtonTapped {
+        case create
+        case cancel
     }
     
     enum ViewTransition {
@@ -38,8 +39,9 @@ struct DiaryFeature {
     }
     
     enum AnyAction {
-
     }
+    
+    @Dependency(\.networkRepository) var networkRepository
     
     var body : some ReducerOf<Self> {
         BindingReducer()

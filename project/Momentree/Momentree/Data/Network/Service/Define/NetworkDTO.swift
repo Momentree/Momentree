@@ -34,7 +34,24 @@ struct checkTokenResponse: Decodable {
     let code: String
 }
 
-// TODO: 일기 저장 (단일)
+struct CreateObjectRequest: Encodable {
+    let content: String
+    let openStatus: String
+    
+    init(content: String, openStatus: String = "OPEN") {
+        self.content = content
+        self.openStatus = openStatus
+    }
+}
+
+struct CreateObjectResponse: Decodable {
+    let id: Int?
+    let createDate: String
+    let lastModifiedDate: String
+}
+
+ 
+
 struct SaveContentRequest: Encodable {
     
 }

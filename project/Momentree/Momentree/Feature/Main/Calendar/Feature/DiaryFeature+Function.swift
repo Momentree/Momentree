@@ -24,6 +24,11 @@ extension DiaryFeature {
     func networkResponseReducer() -> some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
+            case let .networkResponse(response):
+                switch response {
+                case .create:
+                    break
+                }
                 
             default:
                 break
@@ -36,7 +41,29 @@ extension DiaryFeature {
     func buttonTappedReducer() -> some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
-
+            case let .buttonTapped(response):
+                switch response {
+                case .create:
+                    let object = Object(day: state.day, content: state.content)
+                    return .run { send in
+                        do {
+                            try await send(
+                                .networkResponse(
+                                    .create(
+                                        networkRepository.create(object: object)
+                                    )
+                                    
+                                )
+                            )
+                        }
+                        catch {
+                            
+                        }
+                    }
+                    
+                case .cancel:
+                    return .none
+                }
             default:
                 break
             }
